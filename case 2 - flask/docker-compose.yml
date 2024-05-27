@@ -1,0 +1,15 @@
+version: '2.4'
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "60080:80"
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: test
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
